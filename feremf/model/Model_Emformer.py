@@ -231,7 +231,7 @@ class SSA(nn.Module):
         f = self.pool(x)
         f = self.conv(f)
         n, c, h, w = x.shape
-        x = F.unfold(self.pad(x), kernel_size=self.kernel).reshape(n, self.group, c // self.group, self.k, h * w
+        x = F.unfold(self.pad(x), kernel_size=self.kernel).reshape(n, self.group, c // self.group, self.k, h * w)
         n, c1, p, q = f.shape
         f = f.reshape(n, c1 // self.k, self.k, p * q).unsqueeze(2)
         f = self.f_act(f)
