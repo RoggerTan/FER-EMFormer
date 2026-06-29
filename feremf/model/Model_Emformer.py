@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.hub import load_state_dict_from_url
-from MA_Former import enhanced_transformer
+from .MA_Former import enhanced_transformer
 import torch.nn.functional as F
 from torch.nn import MultiheadAttention as MHSA
 from mamba_ssm import Mamba
